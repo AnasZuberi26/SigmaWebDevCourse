@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            float: left;
+            /* float: right; */
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            /* clear: right; */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img width="230" src="image.jpg" alt="Man in boat">
+        <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quos minima eaque assumenda cum. Aspernatur dolore tempora dolor. Maiores aliquid nemo quis nulla consectetur! Consectetur similique dolorem fugiat dignissimos fugit reiciendis expedita maxime possimus.</div>
+        <div class="card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia fugit eaque consequatur, molestias autem ad necessitatibus reiciendis minima illo tempora dicta aperiam. Ipsam excepturi obcaecati, praesentium animi corporis neque asperiores officia eaque sequi? Autem tempore accusamus quibusdam deserunt unde praesentium, nostrum nisi distinctio, dolorem quis quidem eligendi eveniet obcaecati consectetur sunt excepturi quasi perferendis? Fugiat dolores, consequatur provident pariatur, illum a odio sed, voluptates amet itaque odit quod atque nemo. Sunt nemo exercitationem explicabo cumque nesciunt sed omnis in repellat deserunt iste voluptatum eaque voluptate nisi natus reiciendis itaque, architecto alias sit, accusamus dolorum provident fuga et facere tenetur? Perferendis doloremque quas dolor in nostrum, totam, atque expedita obcaecati, delectus tempora magni corrupti minus. Vero repellendus aliquid, voluptate fuga amet commodi id beatae error esse quod modi dolorem! Et soluta saepe necessitatibus quia.</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>
