@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul li a {
+  color: darkblue;
+  text-decoration: none;
+  cursor: pointer;
+}
+ul li {
+  padding: 25px;
+  display: inline;
+  list-style: none;
+  font-weight: 600;
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+ul {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(221, 218, 218);
+}
+#home {
+  /* margin-left: 20vw; */
+  /* margin-right: 20vw; */
+}
+header {
+  position: sticky;
+  top: 0;
+}
+main {
+  gap: 60px;
+  height: auto;
+  /* height: 700px; */
+  flex-wrap: wrap;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: rgb(4, 167, 231);
+}
+main > div {
+  height: 400px;
+  width: 400px;
+  color: whitesmoke;
+  background-color: darkblue;
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  /* justify-content: center;  */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+div.double-height {
+  height: 200px;
+  /* width: 800px;  */
+  color: whitesmoke;
+  background-color: orangered;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.button {
+  height: 60px; /* Adjust for a larger clickable area */
+  width: 60px; /* Make width equal to height for a circle */
+  font-weight: 600;
+  color: darkblue; /* Text color */
+  background-color: whitesmoke;
+  display: flex; /* Use flexbox for centering the text */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  border: 5px solid darkblue;
+  border-radius: 50%; /* Makes it a circle */
+  position: fixed; /* Fixes the button on the screen */
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px; /* Distance from the right side of the screen */
+  cursor: pointer; /* Change cursor to pointer */
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* Adjust text size */
+  z-index: 1000; /* Ensures it appears on top of other elements */
+}
+footer{
+  height: 150px;
+  color: teal;
+  background-color: lavender;
+  border: 5px solid teal;
+  border-radius: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+}
+footer>div:first-child{
+  font-weight: 600;
+  /* padding: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
