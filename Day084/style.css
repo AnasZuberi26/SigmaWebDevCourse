@@ -157,15 +157,57 @@ body {
 }
 
 .playbar {
-  bottom: 0;
-  width: 90%;
+  bottom: 30px;
+  width: 70vw;
   padding: 12px;
-  position: absolute;
-  background-color: #1fdf64;
+  position: fixed;
+  filter: invert(1);
+  border-radius: 30px;
+  background: #dad5d5;
 }
 
-.songbuttons{
+.songbuttons {
   gap: 16px;
   display: flex;
   justify-content: center;
+}
+
+.songList {
+  height: 544px;
+  overflow: auto;
+  margin-bottom: 44px;
+}
+
+.songList ul {
+  padding: 0 12px;
+}
+
+.songList ul li {
+  gap: 12px;
+  padding: 12px 0;
+  display: flex;
+  cursor: pointer;
+  list-style: decimal;
+  margin: 12px 0;
+  padding: 13px;
+  border: 1px solid white;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.songList .info {
+  font-size: 14px;
+  width: 344px;
+}
+
+.playnow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playnow span {
+  width: 64px;
+  padding: 12px;
+  font-size: 15px;
 }
