@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="utility.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -21,6 +21,9 @@
           <div class="heading">
             <img class="invert" src="playlist.svg" alt="playlist" />
             <h3>Your Library</h3>
+            <ul>
+              <li></li>
+            </ul>
           </div>
           <div class="footer">
             <div>
@@ -89,8 +92,8 @@
             </svg>
           </div>
           <div class="buttons">
-            <button>Sign up</button>
-            <button>Log in</button>
+            <button class="signupbtn">Sign up</button>
+            <button class="loginbtn">Log in</button>
           </div>
         </div>
         <div class="spotifyPlaylists">
@@ -122,6 +125,23 @@
               <p>Hits to boost your mood and fill you with happiness!</p>
             </div>
             <div class="card">
+              <div class="play">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 20V4L19 12L5 20Z"
+                    stroke="#141B34"
+                    fill="#000"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
               <img
                 src="https://i.scdn.co/image/ab67616d00001e02931b61b7382db17ed15e75fc"
                 alt=""
@@ -130,8 +150,18 @@
               <p>Hits to boost your mood and fill you with happiness!</p>
             </div>
           </div>
+          <div class="playbar">
+            <div class="songinfo"></div>
+            <div class="songbuttons">
+              <img src="prevsong.svg" alt="">
+              <img src="play.svg" alt="">
+              <img src="nextsong.svg" alt="">
+            </div>
+            <div class="songtime"></div>
+          </div>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
