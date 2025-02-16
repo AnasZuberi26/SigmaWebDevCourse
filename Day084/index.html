@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="utility.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
   </head>
   <body>
     <div class="container flex bg-black">
@@ -153,11 +152,14 @@
             </div>
           </div>
           <div class="playbar">
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
             <div class="songinfo"></div>
             <div class="songbuttons">
-              <img src="prevsong.svg" alt="" />
-              <img src="play.svg" alt="" />
-              <img src="nextsong.svg" alt="" />
+              <img id="previous" src="prevsong.svg" alt="" />
+              <img id="play" src="play.svg" alt="" />
+              <img id="next" src="nextsong.svg" alt="" />
             </div>
             <div class="songtime"></div>
           </div>
