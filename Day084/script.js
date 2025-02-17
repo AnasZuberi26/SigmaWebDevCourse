@@ -40,7 +40,7 @@ const playMusic = (track, pause = false) => {
     play.src = "pause.svg";
   }
   document.querySelector(".songinfo").innerHTML = decodeURI(track);
-  document.querySelector(".songtime").innerHTML = "00:00/00:00";
+  document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 };
 
 async function main() {
@@ -92,7 +92,7 @@ async function main() {
     console.log(currentSong.currentTime, currentSong.duration);
     document.querySelector(".songtime").innerHTML = `${secondsToMinutesSeconds(
       currentSong.currentTime
-    )}/${secondsToMinutesSeconds(currentSong.duration)}`;
+    )} / ${secondsToMinutesSeconds(currentSong.duration)}`;
     document.querySelector(".circle").style.left =
       (currentSong.currentTime / currentSong.duration) * 100 + "%";
   });
