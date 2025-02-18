@@ -1,6 +1,8 @@
 console.log("Let's write javascript");
 
 let currentSong = new Audio();
+let songs;
+let currfolder;
 
 function secondsToMinutesSeconds(seconds) {
   if (isNaN(seconds) || seconds < 0) {
@@ -16,8 +18,9 @@ function secondsToMinutesSeconds(seconds) {
   return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-async function getSongs() {
-  let a = await fetch("http://127.0.0.1:3000/Day084/songs/");
+async function getSongs(folder) {
+  currfolder = folder;
+  let a = await fetch(`http://127.0.0.1:3000/Day084/${folder}/`);
   let response = await a.text();
   //   console.log(response);
   let div = document.createElement("div");
@@ -27,14 +30,14 @@ async function getSongs() {
   for (let i = 0; i < as.length; i++) {
     const element = as[i];
     if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split("/songs/")[1]);
+      songs.push(element.href.split(`${folder}/`)[1]);
     }
   }
   return songs;
 }
 
 const playMusic = (track, pause = false) => {
-  currentSong.src = "/Day084/songs/" + track;
+  currentSong.src = `/Day084/${currfolder}/` + track;
   if (!pause) {
     currentSong.play();
     play.src = "pause.svg";
@@ -44,7 +47,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function main() {
-  let songs = await getSongs();
+  songs = await getSongs("songs/ncs2");
   playMusic(songs[0], true);
 
   let songUL = document
@@ -113,6 +116,37 @@ async function main() {
   document.querySelector(".close").addEventListener("click", () => {
     document.querySelector(".left").style.left = "-120%";
   });
+
+  // Add an event listener to previous
+  previous.addEventListener("click", () => {
+    // console.log("previous click");
+    currentSong.pause();
+    play.src = "play.svg";
+    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+    if (index - 1 >= 0) {
+      playMusic(songs[index - 1]);
+    }
+  });
+
+  // Add an event listener to next
+  next.addEventListener("click", () => {
+    // console.log("next click");
+    currentSong.pause();
+    play.src = "play.svg";
+    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+    if (index + 1 < songs.length) {
+      playMusic(songs[index + 1]);
+    }
+  });
+
+  // Add an event listener to control volume
+  document
+    .querySelector(".volume")
+    .getElementsByTagName("input")[0]
+    .addEventListener("change", (e) => {
+      // console.log(e, e.target, e.target.value);
+      currentSong.volume = parseInt(e.target.value) / 100;
+    });
 }
 
 main();
