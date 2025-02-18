@@ -292,6 +292,11 @@ body {
   gap: 12px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.volume input{
+  cursor: pointer;
 }
 
 .abovebar {
